@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "ignorePatterns": ["node_modules/*"],
+  "extends": [
+    "naver",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended" // eslint의 포맷팅을 prettier로 사용한다
+  ],
+  "rules": {
+    "prettier/prettier": "off",
+    "react/react-in-jsx-scope": "off", //react17 부터는 react import가 필수가 아님
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "warn"
+  }
 }
