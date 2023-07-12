@@ -2,10 +2,21 @@ import { media } from '@/styles/mixins';
 import { LogoSvg } from '@/svg/index';
 import styled from '@emotion/styled';
 import { Box, Button, IconButton, Typography } from '@mui/material';
+import { useEffect, useRef } from 'react';
+import { useWindowScroll } from 'react-use';
 
 export default function Header() {
+  const { y } = useWindowScroll();
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (headerRef.current) {
+      headerRef.current.style.backgroundColor = y > 150 ? '#ffffff' : 'transparent';
+    }
+  }, [y]);
+
   return (
-    <CustomHeader>
+    <CustomHeader ref={headerRef}>
       <IconButton aria-label="logo" size="small" sx={{ padding: 0, height: '50px', borderRadius: '50px' }}>
         <LogoSvg />
       </IconButton>
@@ -26,7 +37,7 @@ export default function Header() {
   );
 }
 
-const CustomHeader = styled.header`
+const CustomHeader = styled.div`
   position: sticky;
   top: 0px;
   height: 118px;
@@ -34,7 +45,7 @@ const CustomHeader = styled.header`
   padding-left: 40px;
   column-gap: 100px;
   align-items: center;
-  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
 
   ${media.laptop`
     column-gap: 30px;
