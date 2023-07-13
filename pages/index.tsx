@@ -1,9 +1,32 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { Wrapper } from '@/components';
+import { Box } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { Banner, Navigation } from '@/containers/Home';
+import { BANNER_ITEMS } from '@/containers/Home/Home.constant';
+import 'swiper/css';
 
 export default function Home() {
-  return <div style={{ height: '100vh' }}>1</div>;
+  return (
+    <Wrapper>
+      <Box position={'relative'}>
+        {/* swiper */}
+        <Swiper
+          slidesPerView={'auto'}
+          autoplay={{ delay: 10000, disableOnInteraction: false }}
+          style={{ aspectRatio: '1.76 / 1' }}
+          modules={[Autoplay]}
+          loop
+        >
+          {BANNER_ITEMS.map((banner, index) => (
+            <SwiperSlide key={index}>
+              <Banner {...banner} />
+            </SwiperSlide>
+          ))}
+          <Navigation />
+        </Swiper>
+      </Box>
+      <Box sx={{ height: '10000px' }}></Box>
+    </Wrapper>
+  );
 }

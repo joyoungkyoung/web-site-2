@@ -22,13 +22,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-use": "^17.4.0",
-    "swiper": "^10.0.3",
+    "swiper": "^10.0.4",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "eslint-config-naver": "^2.1.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "file-loader": "^6.2.0",
     "prettier": "^3.0.0"
   }
 }

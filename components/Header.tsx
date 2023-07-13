@@ -37,7 +37,7 @@ export default function Header() {
   );
 }
 
-const CustomHeader = styled.div`
+const CustomHeader = styled(Box)`
   position: sticky;
   top: 0px;
   height: 118px;
@@ -46,18 +46,18 @@ const CustomHeader = styled.div`
   column-gap: 100px;
   align-items: center;
   transition: background-color 0.1s ease-in-out;
-
+  z-index: 10;
   ${media.laptop`
     column-gap: 30px;
   `}
 `;
 
-const MenuItems = styled.div`
+const MenuItems = styled(Box)`
   display: flex;
   > button {
     display: flex;
     align-items: center;
-    padding: 0px 25px;
+    padding: 0px 20px;
     height: 50px;
     font-size: 16px;
     font-weight: 400;

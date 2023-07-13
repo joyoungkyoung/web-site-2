@@ -1,4 +1,6 @@
+import ArrowRightSvg from './ArrowRightSvg';
 import LogoSvg from './LogoSvg';
+import SlidePrevSvg from './SlidePrevSvg';
+import SlideNextSvg from './SlideNextSvg';
 
-// eslint-disable-next-line import/prefer-default-export
-export { LogoSvg };
+export { LogoSvg, ArrowRightSvg, SlidePrevSvg, SlideNextSvg };
