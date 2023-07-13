@@ -17,7 +17,8 @@
     "paths": {
       "@/*": ["./*"],
       "@/svg": ["components/@svg/index"],
-      "@/images/*": ["public/images/*"]
+      "@/images/*": ["public/images/*"],
+      "@/videos/*": ["public/videos/*"]
     },
     "baseUrl": "."
   },
