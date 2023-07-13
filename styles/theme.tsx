@@ -17,5 +17,13 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'keep-all',
+        },
+      },
+    },
   },
 });

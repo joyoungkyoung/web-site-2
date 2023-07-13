@@ -26,7 +26,6 @@ export default function Home() {
           <Navigation />
         </Swiper>
       </Box>
-      <Box sx={{ height: '10000px' }}></Box>
     </Wrapper>
   );
 }

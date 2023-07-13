@@ -1,5 +1,5 @@
 import { media } from '@/styles/mixins';
-import { LogoSvg } from '@/svg/index';
+import { LogoSvg } from '@/svg';
 import styled from '@emotion/styled';
 import { Box, Button, IconButton, Typography } from '@mui/material';
 import { useEffect, useRef } from 'react';
