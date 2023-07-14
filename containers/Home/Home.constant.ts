@@ -9,6 +9,17 @@ import apartItem8 from '@/images/apartItem/item8.jpg';
 import apartItem9 from '@/images/apartItem/item9.jpg';
 import apartItem10 from '@/images/apartItem/item10.jpg';
 
+import apartItem21 from '@/images/apartItem2/item1.jpg';
+import apartItem22 from '@/images/apartItem2/item2.jpg';
+import apartItem23 from '@/images/apartItem2/item3.jpg';
+import apartItem24 from '@/images/apartItem2/item4.jpg';
+import apartItem25 from '@/images/apartItem2/item5.jpg';
+import apartItem26 from '@/images/apartItem2/item6.jpg';
+import apartItem27 from '@/images/apartItem2/item7.jpg';
+import apartItem28 from '@/images/apartItem2/item8.jpg';
+
+import { StaticImageData } from 'next/image';
+
 export const BANNER_ITEMS = [
   {
     src: '/homeBanner/back1.mp4',
@@ -63,7 +74,13 @@ export const BANNER_ITEMS = [
   },
 ];
 
-export const APART_ITEMS = [
+export type ApartItem = {
+  src: StaticImageData;
+  title: string;
+  desc: string;
+  price: string;
+};
+export const APART_ITEMS: ApartItem[] = [
   {
     src: apartItem1,
     title: '강남 서초더샵포레 아파트',
@@ -121,6 +138,57 @@ export const APART_ITEMS = [
   {
     src: apartItem10,
     title: '파주 해솔마을 운정현태 아파트',
+    desc: '미니멀한 바탕의 미드센추리 인테리어를 만나보세요',
+    price: '평당 230~260만 원',
+  },
+];
+
+export const APART_ITEMS2: ApartItem[] = [
+  {
+    src: apartItem21,
+    title: '강남 서초더샵포레 아파트',
+    desc: '추억이 깃든 가구에 맞춰 더욱 멋스러운\n내추럴 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem22,
+    title: '강남 한보미도맨션 아파트',
+    desc: '화이트&우드 인테리어가 돋보이는 공간을 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem23,
+    title: '일산 위시티블루밍 아파트',
+    desc: '10년 된 아파트를 새 집처럼\n화이트 신혼집 인테리어를 만나보세요',
+    price: '평당 200~230만 원',
+  },
+  {
+    src: apartItem24,
+    title: '용산 더프라임 아파트',
+    desc: '고급스러운 모던 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem25,
+    title: '다산 플루리움 아파트',
+    desc: '우드 인테리어로 포인트를 준 50평대 아파트를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem26,
+    title: '강남 래미안 그레이튼 2차 아파트',
+    desc: '간살 중문으로 포인트를 준 공간을 만나보세요.',
+    price: '평당 200~230만 원',
+  },
+  {
+    src: apartItem27,
+    title: '노원 상계주공 아파트',
+    desc: '효율적으로 수납공간을 마련한\n아담한 평수 인테리어를 만나보세요',
+    price: '평당 230~260만 원',
+  },
+  {
+    src: apartItem28,
+    title: '파주 해솔마을 운정현대 아파트',
     desc: '미니멀한 바탕의 미드센추리 인테리어를 만나보세요',
     price: '평당 230~260만 원',
   },
