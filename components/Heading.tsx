@@ -1,8 +1,9 @@
 import { Typography } from '@mui/material';
+import { Variant } from '@mui/material/styles/createTypography';
 import { PropsWithChildren } from 'react';
 
 interface HeadingProps extends PropsWithChildren {
-  t: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  t: Variant;
   fontSize?: string;
   lineHeight?: string;
   color?: string;

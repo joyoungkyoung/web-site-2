@@ -8,6 +8,12 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ['Decimal', 'SpoqaHanSans', 'Sans-serif'].join(','),
+    h2: {
+      fontSize: '46px',
+    },
+    h4: {
+      fontSize: '24px',
+    },
   },
   components: {
     MuiButton: {

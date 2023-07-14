@@ -21,4 +21,4 @@ const media = Object.keys(breakpoints).reduce((acc, key) => {
   return acc;
 }, init);
 
-export { media };
+export { media, breakpoints };

@@ -1,3 +1,14 @@
+import apartItem1 from '@/images/apartItem/item1.jpg';
+import apartItem2 from '@/images/apartItem/item2.jpg';
+import apartItem3 from '@/images/apartItem/item3.jpg';
+import apartItem4 from '@/images/apartItem/item4.jpg';
+import apartItem5 from '@/images/apartItem/item5.jpg';
+import apartItem6 from '@/images/apartItem/item6.jpg';
+import apartItem7 from '@/images/apartItem/item7.jpg';
+import apartItem8 from '@/images/apartItem/item8.jpg';
+import apartItem9 from '@/images/apartItem/item9.jpg';
+import apartItem10 from '@/images/apartItem/item10.jpg';
+
 export const BANNER_ITEMS = [
   {
     src: '/homeBanner/back1.mp4',
@@ -49,5 +60,68 @@ export const BANNER_ITEMS = [
     src: '/homeBanner/back10.jpg',
     title: '따스함이 느껴지는 집',
     desc: '온기를 불어넣은 우드 인테리어',
+  },
+];
+
+export const APART_ITEMS = [
+  {
+    src: apartItem1,
+    title: '강남 서초더샵포레 아파트',
+    desc: '추억이 깃든 가구에 맞춰 더욱 멋스러운\n내추럴 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem2,
+    title: '성동 트리마제 아파트',
+    desc: '이국적인 분위기의 주방 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem3,
+    title: '위례 중흥S클래스 아파트',
+    desc: '고급스러운 아일랜드 주방 인테리어를 만나보세요',
+    price: '평당 150만 원 이하',
+  },
+  {
+    src: apartItem4,
+    title: '하남 미사 강변 더샵센트럴포레 아파트',
+    desc: '화사한 화이트우드 인테리어를 만나보세요',
+    price: '평당 180~200만 원',
+  },
+  {
+    src: apartItem5,
+    title: '관악 제창그로힐 아파트',
+    desc: '차분한 화이트 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem6,
+    title: '영통 아이파크캐슬 아파트',
+    desc: '홈카페존이 돋보이는 인테리어를 만나보세요',
+    price: '평당 180~200만 원',
+  },
+  {
+    src: apartItem7,
+    title: '용산 KCC웰츠타워 아파트',
+    desc: '고급스러운 아일랜드형 주방 인테리어를 만나보세요',
+    price: '평당 260만 원 이상',
+  },
+  {
+    src: apartItem8,
+    title: '종로 청운벽산빌리지 아파트',
+    desc: '심플하고 모던한 복층 인테리어를 만나보세요',
+    price: '평당 180~200만 원',
+  },
+  {
+    src: apartItem9,
+    title: '노원 상계주공 아파트',
+    desc: '효율적으로 수납공간을 마련한\n아담한 평수 인테리어를 만나보세요',
+    price: '평당 230~260만 원',
+  },
+  {
+    src: apartItem10,
+    title: '파주 해솔마을 운정현태 아파트',
+    desc: '미니멀한 바탕의 미드센추리 인테리어를 만나보세요',
+    price: '평당 230~260만 원',
   },
 ];
