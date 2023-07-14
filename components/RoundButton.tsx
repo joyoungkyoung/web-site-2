@@ -1,18 +1,21 @@
-import { Button, Typography } from '@mui/material';
+import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { PropsWithChildren } from 'react';
+import { breakpoints } from '@/styles/mixins';
 import { ArrowRightSvg } from './@svg';
 
 interface RoundButtonProps extends PropsWithChildren {}
 export default function RoundButton({ children }: RoundButtonProps) {
+  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet})`);
+
   return (
     <Button
       sx={{
         borderRadius: '50px',
         backgroundColor: '#000000',
         width: 'inherit',
-        height: '70px',
+        height: matchTablet ? '50px' : '70px',
         minWidth: '64px',
-        padding: '0 30px',
+        padding: matchTablet ? '0 20px' : '0 30px',
         ':hover': {
           backgroundColor: '#0d0d07',
           boxShadow:
@@ -20,7 +23,10 @@ export default function RoundButton({ children }: RoundButtonProps) {
         },
       }}
     >
-      <Typography sx={{ color: '#ffffff' }}>{children}</Typography>
+      <Typography variant={matchTablet ? 'body2' : 'body1'} fontWeight={'bold'} color={'#ffffff'}>
+        {children}
+      </Typography>
+      <Box width={'10px'} />
       <ArrowRightSvg color="#ffffff" />
     </Button>
   );
