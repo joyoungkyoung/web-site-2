@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
 import { SwiperClass, useSwiper } from 'swiper/react';
 
-interface ApartPaginationProps {
+interface SlidePaginationProps {
   slidesPerView?: number;
 }
-export default function ApartPagination({ slidesPerView = 1 }: ApartPaginationProps) {
+export default function SlidePagination({ slidesPerView = 1 }: SlidePaginationProps) {
   const [barWidth, setBarWidth] = useState<number>();
   const swiper = useSwiper();
   const barRef = useRef<HTMLDivElement>(null);

@@ -1,11 +1,10 @@
-import { Heading, RoundButton } from '@/components';
+import { Heading, RoundButton, SlidePagination } from '@/components';
 import { breakpoints, media } from '@/styles/mixins';
 import { Box, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from '@emotion/styled';
 import { ApartItem } from '../Home.constant';
 import ApartCard from './ApartCard';
-import ApartPagination from './ApartPagination';
 import ApartNav from './ApartNav';
 
 interface ApartSectionProps {
@@ -31,7 +30,7 @@ export default function ApartSection({ title, btn, items }: ApartSectionProps) {
           ))}
           {/* 페이지네이션 슬라이드 */}
           <Box height={'60px'} />
-          <ApartPagination slidesPerView={matchTablet ? 1 : 3} />
+          <SlidePagination slidesPerView={matchTablet ? 1 : 3} />
           {/* 네비게이션 버튼 */}
           {!matchTablet && <ApartNav />}
         </Swiper>

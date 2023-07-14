@@ -2,7 +2,7 @@ import { Wrapper } from '@/components';
 import { Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { ApartSection, Banner, Navigation, VideoSection } from '@/containers/Home';
+import { ApartSection, Banner, Navigation, ReviewSection, VideoSection } from '@/containers/Home';
 import { APART_ITEMS, APART_ITEMS2, BANNER_ITEMS } from '@/containers/Home/Home.constant';
 import 'swiper/css';
 
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Wrapper>
       {/* Swiper Section*/}
-      <Box position={'relative'}>
+      <Box position={'relative'} top={'-120px'}>
         <Swiper
           slidesPerView={'auto'}
           autoplay={{ delay: 10000, disableOnInteraction: false }}
@@ -40,6 +40,8 @@ export default function Home() {
         btn={{ href: '', text: '구축 아파트 더 보기' }}
         items={APART_ITEMS2}
       />
+      {/* Review Section */}
+      <ReviewSection />
     </Wrapper>
   );
 }
