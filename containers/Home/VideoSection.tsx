@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 
 export default function VideoSection() {
-  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet})`);
+  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
 
   return (
     <Box maxWidth={'1920px'} margin={'0 auto'}>

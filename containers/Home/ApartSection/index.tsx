@@ -13,7 +13,7 @@ interface ApartSectionProps {
   items: ApartItem[];
 }
 export default function ApartSection({ title, btn, items }: ApartSectionProps) {
-  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet})`);
+  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
 
   return (
     <Box data-aos="fade-up" marginBottom={'200px'} padding={`0 ${matchTablet ? '20px' : '40px'}`}>
@@ -30,7 +30,7 @@ export default function ApartSection({ title, btn, items }: ApartSectionProps) {
           ))}
           {/* 페이지네이션 슬라이드 */}
           <Box height={'60px'} />
-          <SlidePagination slidesPerView={matchTablet ? 1 : 3} />
+          <SlidePagination />
           {/* 네비게이션 버튼 */}
           {!matchTablet && <ApartNav />}
         </Swiper>

@@ -3,10 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
 import { SwiperClass, useSwiper } from 'swiper/react';
 
-interface SlidePaginationProps {
-  slidesPerView?: number;
-}
-export default function SlidePagination({ slidesPerView = 1 }: SlidePaginationProps) {
+export default function SlidePagination() {
   const [barWidth, setBarWidth] = useState<number>();
   const swiper = useSwiper();
   const barRef = useRef<HTMLDivElement>(null);
@@ -20,7 +17,7 @@ export default function SlidePagination({ slidesPerView = 1 }: SlidePaginationPr
 
   useEffect(() => {
     if (swiper && barRef.current) {
-      const total = swiper.slides?.length - (slidesPerView - 1);
+      const total = swiper.snapGrid?.length;
 
       const width = barRef.current.parentElement?.clientWidth;
 

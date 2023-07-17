@@ -5,7 +5,7 @@ import { ArrowRightSvg } from './@svg';
 
 interface RoundButtonProps extends PropsWithChildren {}
 export default function RoundButton({ children }: RoundButtonProps) {
-  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet})`);
+  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
 
   return (
     <Button

@@ -16,15 +16,13 @@ export default function ApartCard({ src, title, desc, price }: ApartCardProps) {
   const imageRef = useRef<HTMLImageElement>(null);
   const { width: windowWidth } = useWindowSize();
 
-  const matchLaptop = useMediaQuery(`(max-width:${breakpoints.laptop})`);
-  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet})`);
+  const matchLaptop = useMediaQuery(`(max-width:${breakpoints.laptop}px)`);
+  const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
 
   useEffect(() => {
     if (imageRef.current) {
       const width = imageRef.current.clientWidth;
       const height = width / 1.52632;
-
-      console.log(width, height);
 
       if (imageRef.current.parentElement) {
         imageRef.current.parentElement.style.height = `${height}px`;
