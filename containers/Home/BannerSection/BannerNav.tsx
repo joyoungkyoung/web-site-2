@@ -3,9 +3,9 @@ import { SlideNextSvg, SlidePrevSvg } from '@/svg';
 import styled from '@emotion/styled';
 import { Box, IconButton } from '@mui/material';
 import { SwiperClass, useSwiper } from 'swiper/react';
-import { BANNER_ITEMS } from './Home.constant';
+import { BANNER_ITEMS } from '../Home.constant';
 
-export default function Navigation() {
+export default function BannerNav() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiper = useSwiper();
 

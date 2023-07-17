@@ -1,31 +1,13 @@
 import { Wrapper } from '@/components';
-import { Box } from '@mui/material';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import { ApartSection, Banner, Navigation, ReviewSection, VideoSection } from '@/containers/Home';
-import { APART_ITEMS, APART_ITEMS2, BANNER_ITEMS } from '@/containers/Home/Home.constant';
+import { ApartSection, BannerSection, ReviewSection, VideoSection } from '@/containers/Home';
+import { APART_ITEMS, APART_ITEMS2 } from '@/containers/Home/Home.constant';
 import 'swiper/css';
 
 export default function Home() {
   return (
     <Wrapper>
       {/* Swiper Section*/}
-      <Box position={'relative'} top={'-120px'}>
-        <Swiper
-          slidesPerView={'auto'}
-          autoplay={{ delay: 10000, disableOnInteraction: false }}
-          modules={[Autoplay]}
-          style={{ aspectRatio: '1.76 / 1' }}
-          loop
-        >
-          {BANNER_ITEMS.map((banner, index) => (
-            <SwiperSlide key={index}>
-              <Banner {...banner} />
-            </SwiperSlide>
-          ))}
-          <Navigation />
-        </Swiper>
-      </Box>
+      <BannerSection />
       {/* Video Section */}
       <VideoSection />
       {/* Apart Section1 */}
