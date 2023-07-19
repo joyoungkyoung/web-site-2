@@ -5,5 +5,6 @@ import Wrapper from './Wrapper';
 import FixedWidget from './FixedWidget';
 import RoundButton from './RoundButton';
 import SlidePagination from './SlidePagination';
+import NumPagination from './NumPagination';
 
-export { Header, Footer, Wrapper, Heading, FixedWidget, RoundButton, SlidePagination };
+export { Header, Footer, Wrapper, Heading, FixedWidget, RoundButton, SlidePagination, NumPagination };

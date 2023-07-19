@@ -34,5 +34,16 @@ export const theme = createTheme({
         },
       },
     },
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          ':hover': {
+            ':before': {
+              borderWidth: '1px !important',
+            },
+          },
+        },
+      },
+    },
   },
 });
