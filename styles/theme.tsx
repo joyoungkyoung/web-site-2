@@ -5,6 +5,9 @@ export const theme = createTheme({
     primary: {
       main: '#feeb8f',
     },
+    black: {
+      main: '#000000',
+    },
   },
   typography: {
     fontFamily: ['Decimal', 'SpoqaHanSans', 'Sans-serif'].join(','),
