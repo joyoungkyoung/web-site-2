@@ -2,6 +2,7 @@ import { media } from '@/styles/mixins';
 import { LogoSvg } from '@/svg';
 import styled from '@emotion/styled';
 import { Box, Button, IconButton, Typography } from '@mui/material';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { useWindowScroll } from 'react-use';
 
@@ -21,7 +22,9 @@ export default function Header() {
         <LogoSvg />
       </IconButton>
       <MenuItems>
-        <Button color="inherit">포트폴리오</Button>
+        <Button color="inherit">
+          <Link href="/portfolio">포트폴리오</Link>
+        </Button>
         <Button color="inherit">서비스 소개</Button>
         <Button color="inherit">읽을거리</Button>
         <Button color="inherit">
