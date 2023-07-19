@@ -11,7 +11,7 @@ declare module '@mui/material/styles' {
 }
 
 declare module '@mui/material' {
-  interface InputBasePropsColorOverrides {
+  interface TextFieldPropsColorOverrides {
     black: true;
   }
 }
