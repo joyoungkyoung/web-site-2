@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 import styled from '@emotion/styled';
-import { Heading } from '@/components';
+import { BannerImage, Heading } from '@/components';
 import { ArrowRightSvg } from '@/svg';
 import { Box, Button, Typography } from '@mui/material';
 import { useSwiperSlide } from 'swiper/react';
@@ -29,7 +29,7 @@ export default function Banner({ source, title, desc, color = '#000000' }: Banne
 
   return (
     <Box position={'relative'} height={'100%'}>
-      {isImage && <Image src={src} alt="banner-image" fill />}
+      {isImage && <BannerImage src={src} alt="banner-image" fill />}
       {isVideo && <video ref={videoRef} src={src} style={{ width: '100%', objectFit: 'cover' }} loop muted />}
       <Detail color={color}>
         <Box paddingLeft={'8px'}>
