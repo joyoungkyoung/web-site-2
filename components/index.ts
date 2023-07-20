@@ -6,5 +6,6 @@ import FixedWidget from './FixedWidget';
 import RoundButton from './RoundButton';
 import SlidePagination from './SlidePagination';
 import NumPagination from './NumPagination';
+import Badge from './Badge';
 
-export { Header, Footer, Wrapper, Heading, FixedWidget, RoundButton, SlidePagination, NumPagination };
+export { Header, Footer, Wrapper, Heading, FixedWidget, RoundButton, SlidePagination, NumPagination, Badge };
