@@ -2,6 +2,7 @@ import { Heading, RoundButton } from '@/components';
 import { breakpoints, media } from '@/styles/mixins';
 import styled from '@emotion/styled';
 import { Box, Typography, useMediaQuery } from '@mui/material';
+import mainIntroduce from '@/videos/main-introduce.mp4';
 
 export default function VideoSection() {
   const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
@@ -12,7 +13,7 @@ export default function VideoSection() {
       <Box display={'flex'} justifyContent={'center'}>
         <VideoWrapper>
           <video
-            src="/videos/main-introduce.mp4"
+            src={mainIntroduce}
             autoPlay
             muted
             style={{

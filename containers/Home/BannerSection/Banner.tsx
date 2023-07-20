@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styled from '@emotion/styled';
 import { Heading } from '@/components';
 import { ArrowRightSvg } from '@/svg';
@@ -7,15 +7,16 @@ import { Box, Button, Typography } from '@mui/material';
 import { useSwiperSlide } from 'swiper/react';
 
 interface BannerProps {
-  src: string;
+  source: StaticImageData | string;
   title: string;
   desc: string;
   color?: string;
 }
-export default function Banner({ src, title, desc, color = '#000000' }: BannerProps) {
+export default function Banner({ source, title, desc, color = '#000000' }: BannerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const swiperSlide = useSwiperSlide();
 
+  const src = typeof source === 'string' ? source : source.src;
   const isImage = src.endsWith('.jpg') || src.endsWith('.png') || src.endsWith('.jpeg');
   const isVideo = src.endsWith('.mp4');
 
