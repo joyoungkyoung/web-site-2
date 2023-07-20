@@ -18,7 +18,8 @@
       "@/*": ["./*"],
       "@/svg": ["components/@svg/index"],
       "@/images/*": ["public/images/*"],
-      "@/videos/*": ["public/videos/*"]
+      "@/videos/*": ["public/videos/*"],
+      "@/fonts": ["styles/fonts"]
     },
     "baseUrl": "."
   },

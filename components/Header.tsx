@@ -82,5 +82,6 @@ const Badge = styled(Box)`
   > p {
     font-weight: 600;
     font-size: 8px;
+    font-family: var(--font-decimal);
   }
 `;

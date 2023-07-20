@@ -89,7 +89,7 @@ const NumberBox = styled(Box)`
     min-height: 35px;
   }
   p {
-    font-family: DecimalInline;
+    font-family: var(--font-decimal-inline);
     text-decoration: underline;
     font-weight: 700;
   }

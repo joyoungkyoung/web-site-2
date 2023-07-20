@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material';
+import { Decimal, DecimalInline, SpoqaHanSans } from '@/fonts';
 
 export const theme = createTheme({
   palette: {
@@ -10,7 +11,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Decimal', 'SpoqaHanSans', 'Sans-serif'].join(','),
+    fontFamily: [SpoqaHanSans.style.fontFamily, Decimal.style.fontFamily, DecimalInline.style.fontFamily].join(','),
     h2: {
       fontSize: '46px',
     },
