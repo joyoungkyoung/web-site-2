@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import portfolioBanner from '@/images/portfolio-banner.jpg';
-import { BannerImage, Heading } from '@/components';
+import { Heading } from '@/components';
+import styled from '@emotion/styled';
 
 export default function BannerSection() {
   return (
@@ -12,7 +14,7 @@ export default function BannerSection() {
       }}
     >
       <Box position={'relative'}>
-        <BannerImage src={portfolioBanner} alt="portfolio-banner" />
+        <PortfolioBanner src={portfolioBanner} alt="portfolio-banner" />
         <Box position={'absolute'} top={'11.5vw'} left={'64.8%'} zIndex={1}>
           <Heading t="h2">포트폴리오</Heading>
           <Box height={'0.4vw'} />
@@ -22,3 +24,11 @@ export default function BannerSection() {
     </Box>
   );
 }
+
+const PortfolioBanner = styled(Image)`
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 590px;
+  object-fit: cover;
+`;
