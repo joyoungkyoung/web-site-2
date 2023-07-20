@@ -1,11 +1,10 @@
+const withPlugins = require('next-compose-plugins');
 const withVideos = require('next-videos');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   images: {
-    loader: 'imgix',
-    path: '/',
+    unoptimized: true,
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -16,4 +15,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withVideos(nextConfig);
+module.exports = withPlugins([[withVideos]], nextConfig);
