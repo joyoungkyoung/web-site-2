@@ -4,7 +4,7 @@ const { name } = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'development' ? '' : `/${name}`,
+  assetPrefix: process.env.APP_ENV === 'development' ? '' : `/${name}`,
   images: {
     unoptimized: true,
   },
