@@ -3,8 +3,8 @@ import { PropsWithChildren } from 'react';
 import { breakpoints } from '@/styles/mixins';
 import { ArrowRightSvg } from '../@svg';
 
-interface RoundButtonProps extends PropsWithChildren {}
-export default function RoundButton({ children }: RoundButtonProps) {
+interface RoundTitleButtonProps extends PropsWithChildren {}
+export default function RoundTitleButton({ children }: RoundTitleButtonProps) {
   const matchTablet = useMediaQuery(`(max-width:${breakpoints.tablet}px)`);
 
   return (

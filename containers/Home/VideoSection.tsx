@@ -1,4 +1,4 @@
-import { Heading, RoundButton } from '@/components';
+import { Heading, RoundTitleButton } from '@/components';
 import { breakpoints, media } from '@/styles/mixins';
 import styled from '@emotion/styled';
 import { Box, Typography, useMediaQuery } from '@mui/material';
@@ -36,7 +36,7 @@ export default function VideoSection() {
               집을 고치기로 결심한 순간부터 쌓이는 고민들. 아파트멘터리와 함께라면 걱정 없이 설렘만 가득할 거에요.
             </Typography>
             <Box height={'40px'} />
-            <RoundButton>서비스 알아보기</RoundButton>
+            <RoundTitleButton>서비스 알아보기</RoundTitleButton>
           </VideoCaption>
         </VideoWrapper>
       </Box>

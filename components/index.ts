@@ -6,7 +6,7 @@ import FixedWidget from './FixedWidget';
 import SlidePagination from './SlidePagination';
 import NumPagination from './NumPagination';
 import Badge from './Badge';
-import { AdornButton, CloseButton, PrevButton, RoundButton, UploadButton } from './Button';
+import { AdornButton, CloseButton, PrevButton, RoundTitleButton, UploadButton } from './Button';
 
 export {
   Header,
@@ -14,7 +14,7 @@ export {
   Wrapper,
   Heading,
   FixedWidget,
-  RoundButton,
+  RoundTitleButton,
   AdornButton,
   CloseButton,
   UploadButton,
