@@ -1,11 +1,14 @@
 export type SearchFilter = {
   key: string;
   label: string;
+  // price Key 관련
+  min?: number;
+  max?: number;
 };
 
 export type SearchFilterKey = 'flat' | 'keyword' | 'price' | 'service' | 'sort';
 
-export const SEARCH_FILTER: { [key in SearchFilterKey]: { key: string; label: string }[][] } = {
+export const SEARCH_FILTER: { [key in SearchFilterKey]: SearchFilter[][] } = {
   flat: [
     [
       { key: '0', label: '20평형대' },
@@ -37,14 +40,14 @@ export const SEARCH_FILTER: { [key in SearchFilterKey]: { key: string; label: st
   ],
   price: [
     [
-      { key: '20', label: '150만 원 이하' },
-      { key: '22', label: '150~180만 원' },
-      { key: '24', label: '180~200만 원' },
+      { key: '20', label: '150만 원 이하', max: 150 },
+      { key: '22', label: '150~180만 원', min: 150, max: 180 },
+      { key: '24', label: '180~200만 원', min: 180, max: 200 },
     ],
     [
-      { key: '21', label: '200~230만 원' },
-      { key: '23', label: '230~260만 원' },
-      { key: '25', label: '260만 원 이상' },
+      { key: '21', label: '200~230만 원', min: 200, max: 230 },
+      { key: '23', label: '230~260만 원', min: 230, max: 260 },
+      { key: '25', label: '260만 원 이상', min: 260 },
     ],
   ],
   service: [

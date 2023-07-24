@@ -15,10 +15,11 @@ export default function CardSection() {
         {CARD_ARRAY.map((item) => (
           <Card
             key={item.uuid}
+            id={item.uuid}
             src={item.pcThumbnailImageUrl}
             title={item.title}
             desc={item.description}
-            price={'금액'}
+            price={item.pricePerSize}
           />
         ))}
       </CardGrid>
