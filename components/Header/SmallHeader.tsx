@@ -1,7 +1,7 @@
 import { Box, Button, Dialog, IconButton, Link, Typography, styled } from '@mui/material';
 import { ArrowRightSvg, CloseSvg, HamburgerSvg, LogoSmallSvg } from '@/svg';
 import { useState } from 'react';
-import { HEADER_PATH } from './Header.constant';
+import RoutesString from '@/utils/RoutesString';
 
 type Menu = {
   title: string;
@@ -9,7 +9,7 @@ type Menu = {
 };
 const MENU_ITEMS1: Menu[] = [
   { title: '서비스 소개', href: '' },
-  { title: '포트폴리오', href: HEADER_PATH.Portfolio },
+  { title: '포트폴리오', href: RoutesString.Portfolio },
   { title: '읽을거리', href: '' },
   { title: '아파트멘터리 브랜드', href: '' },
 ];

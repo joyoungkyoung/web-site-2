@@ -1,10 +1,10 @@
 import { Box, Button, IconButton, Link, styled } from '@mui/material';
 import { LogoSvg } from '@/svg';
 import { Badge } from '@/components';
-import { HEADER_PATH } from './Header.constant';
+import RoutesString from '@/utils/RoutesString';
 
 const MENU_ITEMS = [
-  { title: '포트폴리오', href: HEADER_PATH.Portfolio, isBadge: false },
+  { title: '포트폴리오', href: RoutesString.Portfolio, isBadge: false },
   { title: '서비스 소개', href: '', isBadge: false },
   { title: '읽을거리', href: '', isBadge: false },
   { title: '상담 신청', href: '', isBadge: true },

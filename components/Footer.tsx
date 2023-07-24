@@ -18,6 +18,7 @@ export default function Footer() {
         style={{
           maxWidth: '100%',
           width: '100%',
+          height: 'auto',
           maxHeight: '760px',
           objectFit: 'cover',
           objectPosition: 'center center',

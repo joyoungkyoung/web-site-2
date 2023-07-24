@@ -1,7 +1,7 @@
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { PropsWithChildren } from 'react';
 import { breakpoints } from '@/styles/mixins';
-import { ArrowRightSvg } from './@svg';
+import { ArrowRightSvg } from '../@svg';
 
 interface RoundButtonProps extends PropsWithChildren {}
 export default function RoundButton({ children }: RoundButtonProps) {
