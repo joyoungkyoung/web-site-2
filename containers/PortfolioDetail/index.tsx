@@ -1,3 +1,5 @@
 import DetailHeader from './DetailHeader';
+import TitleSection from './TitleSection';
+import ImageSection from './ImageSection';
 
-export { DetailHeader };
+export { DetailHeader, TitleSection, ImageSection };

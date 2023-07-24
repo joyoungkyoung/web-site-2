@@ -22,6 +22,9 @@ export const Decimal = localFont({
 });
 
 export const DecimalInline = localFont({
-  src: [{ path: '../public/fonts/Decimal/Decimal-Bold.woff2', weight: '700', style: 'normal' }],
+  src: [
+    { path: '../public/fonts/Decimal/Decimal-Medium.woff2', weight: '500', style: 'normal' },
+    { path: '../public/fonts/Decimal/Decimal-Bold.woff2', weight: '700', style: 'normal' },
+  ],
   variable: '--font-decimal-inline',
 });

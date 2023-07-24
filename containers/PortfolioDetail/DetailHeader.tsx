@@ -13,7 +13,7 @@ export default function DetailHeader() {
     <Box>
       <HeaderBox>
         <PrevButton />
-        <AdornButton onClick={handleOpenDropdown} icon={<ArrowDownSvg />}>
+        <AdornButton onClick={handleOpenDropdown} endIcon={<ArrowDownSvg />}>
           거실(1)
         </AdornButton>
         <UploadButton />
@@ -25,7 +25,7 @@ export default function DetailHeader() {
         {/* 최상단 */}
         <HeaderBox>
           <PrevButton hide />
-          <AdornButton icon={<ArrowDownSvg />}>거실(1)</AdornButton>
+          <AdornButton endIcon={<ArrowDownSvg />}>거실(1)</AdornButton>
           <CloseButton onClick={handleCloseDropdown} />
         </HeaderBox>
         {/* 드롭다운 */}
