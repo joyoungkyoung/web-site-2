@@ -1,13 +1,11 @@
-import Image from 'next/image';
-import { AdornButton, Heading, RoundButton, TextSwitch, Wrapper } from '@/components';
-import { UploadSvg } from '@/components/@svg';
+import { Wrapper } from '@/components';
 import { CARD_ARRAY } from '@/containers/Portfolio/Portfolio.get';
-import { DescSection, DetailHeader, ImageSection, TitleSection } from '@/containers/PortfolioDetail';
+import { DescSection, DetailHeader, ImageSection, MoreSection, TitleSection } from '@/containers/PortfolioDetail';
 import { breakpoints } from '@/styles/mixins';
 import { groupBy } from '@/utils/Function';
-import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
 import { useRouter } from 'next/router';
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 export default function PortfolioDetail() {
   const router = useRouter();
@@ -35,9 +33,8 @@ export default function PortfolioDetail() {
         {/* 설명 */}
         {item && <DescSection item={item} />}
 
-        <Box>{/* 더보기1 */}</Box>
-        <Box>{/* 더보기2 */}</Box>
-        <Box>{/* 더보기3 */}</Box>
+        {/* 더 보기 */}
+        <MoreSection />
       </Box>
     </Wrapper>
   );
