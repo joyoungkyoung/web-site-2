@@ -12,3 +12,33 @@ export function getRangeByPrice(price: number) {
 
   return targets.length ? targets[0].label : '';
 }
+
+export function getStyleType(types: string[]) {
+  const parsedArr = types.map((str) => {
+    switch (str) {
+      case 'MIDDLE_ROOM':
+        return '중문이 있는';
+      case 'IRELAND_KITCHEN':
+        return '아일랜드 주방';
+      default:
+        return null;
+    }
+  });
+
+  return parsedArr.filter((str) => str).join(', ');
+}
+
+export function getServiceType(types: string[]) {
+  const parsedArr = types.map((str) => {
+    switch (str) {
+      case 'NEW':
+        return '5년 이하 신축';
+      case 'OLD':
+        return '5년 이상 구축';
+      default:
+        return null;
+    }
+  });
+
+  return parsedArr.filter((str) => str).join(', ');
+}

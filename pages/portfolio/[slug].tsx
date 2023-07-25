@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { AdornButton, Heading, RoundButton, TextSwitch, Wrapper } from '@/components';
 import { UploadSvg } from '@/components/@svg';
 import { CARD_ARRAY } from '@/containers/Portfolio/Portfolio.get';
-import { DetailHeader, ImageSection, TitleSection } from '@/containers/PortfolioDetail';
+import { DescSection, DetailHeader, ImageSection, TitleSection } from '@/containers/PortfolioDetail';
 import { breakpoints } from '@/styles/mixins';
 import { groupBy } from '@/utils/Function';
 import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
@@ -32,7 +32,9 @@ export default function PortfolioDetail() {
         {/* 그룹 별 이미지 */}
         <ImageSection group={group} />
 
-        <Box>{/* 설명 */}</Box>
+        {/* 설명 */}
+        {item && <DescSection item={item} />}
+
         <Box>{/* 더보기1 */}</Box>
         <Box>{/* 더보기2 */}</Box>
         <Box>{/* 더보기3 */}</Box>

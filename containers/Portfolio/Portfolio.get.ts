@@ -32,8 +32,66 @@ import image698bf140196645c9b63af5caca0bd3fd from '@/images/sampleCard/698bf1401
 import image1e9ba870a5e24e21b56da75a8df02bf1 from '@/images/sampleCard/1e9ba870a5e24e21b56da75a8df02bf1.jpeg';
 import imageb55e54c8b1ca4aaa81ff53c12ca48640 from '@/images/sampleCard/b55e54c8b1ca4aaa81ff53c12ca48640.jpeg';
 import image17ec2d3ac3c04826a83b8bf7d52455b1 from '@/images/sampleCard/17ec2d3ac3c04826a83b8bf7d52455b1.jpeg';
+import { StaticImageData } from 'next/image';
 
-export const CARD_ARRAY = [
+export type CardInfo = {
+  uuid: string;
+  createdDate: string;
+  createdBy: string;
+  isActive: boolean;
+  lastModifiedDate: string;
+  lastModifiedBy: string;
+  title: string;
+  description: string;
+  content: string;
+  aptName: string;
+  spaceSize: number;
+  zipCode: string;
+  address: string;
+  roadAddress: string;
+  addressDetail: string;
+  displayAddress: string;
+  constructionStartMonth: string;
+  constructionEndYear: string;
+  constructionStartDate: string;
+  constructionEndDate: string;
+  finalConstructionPrice: number;
+  constructionPart: string;
+  customerName: string;
+  customerReview: string;
+  pcThumbnailImageUrl: StaticImageData;
+  mobileThumbnailImageUrl: StaticImageData;
+  isListDisplay: boolean;
+  isMainBannerDisplay?: any;
+  isBottomArea1Display?: any;
+  isBottomArea2Display?: any;
+  serviceTypes: string[];
+  styleTypes: string[];
+  imageSets: ImageSet[];
+  mainBannerDisplayOrder?: any;
+  pcMainBannerImageUrl?: any;
+  mobileMainBannerImageUrl?: any;
+  mainBannerText?: any;
+  mainBannerSubText?: any;
+  mainBannerTextColor?: any;
+  bottomArea1DisplayOrder?: any;
+  bottomArea2DisplayOrder?: any;
+  recommendDisplayOrder: number;
+  displayOrder?: any;
+  storeType?: any;
+  pricePerSize: number;
+};
+
+export type ImageSet = {
+  uuid: string;
+  changeLog?: any;
+  displayOrder: number;
+  name: string;
+  beforeImageUrl: StaticImageData | string;
+  afterImageUrl: StaticImageData | string;
+};
+
+export const CARD_ARRAY: CardInfo[] = [
   {
     uuid: 'woidifqbdf',
     createdDate: '2023-07-18T14:33:33',

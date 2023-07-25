@@ -8,7 +8,7 @@ export const theme = createTheme({
     },
     black: {
       main: '#000000',
-    },
+    }
   },
   typography: {
     fontFamily: [SpoqaHanSans.style.fontFamily, Decimal.style.fontFamily, DecimalInline.style.fontFamily].join(','),

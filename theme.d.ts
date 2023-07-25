@@ -14,4 +14,8 @@ declare module '@mui/material' {
   interface TextFieldPropsColorOverrides {
     black: true;
   }
+
+  interface ButtonPropsColorOverrides {
+    black: true;
+  }
 }
